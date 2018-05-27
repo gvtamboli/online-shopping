@@ -15,6 +15,9 @@
     <meta name="author" content="">
 
     <title>Shop Homepage - ${title}</title>
+    <script type="text/javascript">
+    	window.menu = '${title}';
+    </script>
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -46,6 +49,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="${js}/jquery.min.js"></script>
     <script src="${js}/bootstrap.bundle.min.js"></script>
+    <script src="${js}/apploader.js"></script>
 
   </body>
 
