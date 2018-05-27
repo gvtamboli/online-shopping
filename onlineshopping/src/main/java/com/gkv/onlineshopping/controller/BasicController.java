@@ -11,7 +11,7 @@ public class BasicController {
 	public ModelAndView initMethod() {
 		System.out.println("entered");
 		ModelAndView modelAndView = new ModelAndView("page");
-		modelAndView.addObject("message", "greeting message test");
+		modelAndView.addObject("msg", "greeting message test");
 		return modelAndView;
 	}
 
