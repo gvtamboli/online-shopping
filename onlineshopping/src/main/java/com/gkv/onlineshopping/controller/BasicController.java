@@ -9,28 +9,29 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class BasicController {
 	
-	@RequestMapping(value="/")
-	public ModelAndView initMethod() {
+	@RequestMapping(value= {"/","/home","index"})
+	public ModelAndView index() {
 		System.out.println("entered");
-		ModelAndView modelAndView = new ModelAndView("page");
-		modelAndView.addObject("msg", "greeting message test");
-		return modelAndView;
+		ModelAndView view = new ModelAndView("page");
+		view.addObject("title","Home");
+		view.addObject("userClickHome", true);
+		return view;
+	}
+
+	@RequestMapping(value="/about")
+	public ModelAndView about(){
+		ModelAndView view = new ModelAndView("page");
+		view.addObject("title","About Us");
+		view.addObject("userClickAbout", true);
+		return view;
 	}
 	
-	@RequestMapping(value="/welcome")
-	public ModelAndView paramMethod(@RequestParam(name="user", defaultValue="Guest") String user) {
-		System.out.println("entered");
-		ModelAndView modelAndView = new ModelAndView("page");
-		modelAndView.addObject("msg", "Hello:"+user+", Welcome to onlineshopping");
-		return modelAndView;
-	}
-	
-	@RequestMapping(value="/welcome/{user}")
-	public ModelAndView pathVarMethod(@PathVariable(name="user") String user) {
-		System.out.println("entered");
-		ModelAndView modelAndView = new ModelAndView("page");
-		modelAndView.addObject("msg", "Hello:"+user+", Welcome to onlineshopping");
-		return modelAndView;
+	@RequestMapping(value="/contact")
+	public ModelAndView contact(){
+		ModelAndView view = new ModelAndView("page");
+		view.addObject("title","Contact us");
+		view.addObject("userClickContact", true);
+		return view;
 	}
 
 }
