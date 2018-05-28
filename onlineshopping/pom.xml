@@ -9,6 +9,11 @@
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
+			<groupId>com.gkv</groupId>
+			<artifactId>shoppingbackend</artifactId>
+			<version>0.0.1-RELEASE</version>
+		</dependency>
+		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>7.0</version>
